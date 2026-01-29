@@ -8,7 +8,7 @@ trigger:
   - runbook
   - onboarding
   - setup
-scope: project
+scope: cross
 auto_invoke: true
 tools:
   - read
