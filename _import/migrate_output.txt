@@ -1,0 +1,34 @@
+OK: accessibility_a11y_standard -> skills/frontend/accessibility_a11y_standard.md
+OK: adr_architecture -> skills/architecture/adr_architecture.md
+OK: api_design_backend -> skills/backend/api_design_backend.md
+OK: ci_cd_github_actions -> skills/devops/ci_cd_github_actions.md
+OK: config_env_secrets -> skills/global/config_env_secrets.md
+OK: data_migrations_backup_restore -> skills/backend/data_migrations_backup_restore.md
+OK: docs_readme_runbooks -> skills/project/docs_readme_runbooks.md
+OK: error_handling_standard -> skills/global/error_handling_standard.md
+OK: feature_flags_experiments -> skills/cross/feature_flags_experiments.md
+OK: frontend_app_logic -> skills/frontend/frontend_app_logic.md
+OK: frontend_data_fetching_patterns -> skills/frontend/frontend_data_fetching_patterns.md
+OK: frontend_loading_empty_states -> skills/frontend/frontend_loading_empty_states.md
+OK: frontend_state_management_standard -> skills/frontend/frontend_state_management_standard.md
+OK: git_github_flow -> skills/repository/git_github_flow.md
+OK: logging_standard -> skills/system/logging_standard.md
+OK: n8n_workflows -> skills/automation/n8n_workflows.md
+OK: observability_tracing -> skills/cross/observability_tracing.md
+OK: performance_frontend_budget -> skills/frontend/performance_frontend_budget.md
+OK: pr_expert -> skills/repository/pr_expert.md
+OK: prisma_postgres -> skills/backend/prisma_postgres.md
+OK: privacy_data_handling -> skills/global/privacy_data_handling.md
+OK: rate_limit_resilience -> skills/global/rate_limit_resilience.md
+OK: release_versioning_changelog -> skills/global/release_versioning_changelog.md
+OK: security_owasp_auth -> skills/security/security_owasp_auth.md
+OK: stack_standard_postgres -> skills/global/stack_standard_postgres.md
+OK: tech_debt_analysis -> skills/cross/tech_debt_analysis.md
+OK: tech_debt_todos -> skills/cross/tech_debt_todos.md
+OK: technical_audit -> skills/system/technical_audit.md
+OK: testing_standard -> skills/global/testing_standard.md
+OK: testing_tdd_fdd -> skills/backend/testing_tdd_fdd.md
+OK: ui_design_system_standard -> skills/frontend/ui_design_system_standard.md
+
+Migrated: 31
+Skipped:  0
