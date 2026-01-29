@@ -1,4 +1,4 @@
-# Agents_Kit
+# AgentOS
 
 Reusable **Agents + Skills** operating system to build, audit and operate production software.
 
