@@ -12,6 +12,7 @@ trigger:
   - versioning
 scope: backend
 auto_invoke: true
+dependencies: []
 tools:
   - read
   - write

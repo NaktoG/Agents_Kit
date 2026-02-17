@@ -1,4 +1,3 @@
-
 ---
 name: prisma_postgres
 description: Gestión de modelos de datos, schema Prisma y uso de PostgreSQL como base de datos estándar
