@@ -4,7 +4,7 @@
 |------|-------|-------------|----------|--------------|
 | adr_architecture | architecture | true |  |  |
 | n8n_workflows | automation | true |  |  |
-| api_design_backend | backend | true |  |  |
+| api_design_backend | backend | true |  | [] |
 | data_migrations_backup_restore | backend | true |  |  |
 | prisma_postgres | backend | true |  |  |
 | testing_tdd_fdd | backend | true |  |  |

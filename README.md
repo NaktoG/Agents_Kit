@@ -20,10 +20,10 @@ Reusable **Agents + Skills** operating system to build, audit and operate produc
 Add this repo as a submodule:
 
 ```bash
-git submodule add git@github.com:NaktoG/Agents_Kit.git .agents
+git submodule add https://github.com/NaktoG/agentes.git .agentes
 ```
 
-Then add an `AI.md` in your project root pointing to `.agents/`.
+Then add an `AI.md` in your project root pointing to `.agentes/`.
 
 ## Source of truth
 - `core/*`
