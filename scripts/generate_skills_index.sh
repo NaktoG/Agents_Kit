@@ -29,7 +29,7 @@ extract() {
   ' "$file"
 }
 
-for f in $(find skills -type f -name "*.md" ! -name "README.md" ! -name "SKILLS_INDEX.md"); do
+while IFS= read -r -d '' f; do
   name=$(extract "$f" "name")
   scope=$(extract "$f" "scope")
   auto=$(extract "$f" "auto_invoke")
@@ -42,7 +42,7 @@ for f in $(find skills -type f -name "*.md" ! -name "README.md" ! -name "SKILLS_
   fi
 
   echo "| $name | $scope | $auto | $triggers | $deps |" >> "$OUT"
-done
+done < <(find skills -type f -name "*.md" ! -name "README.md" ! -name "SKILLS_INDEX.md" -print0 | LC_ALL=C sort -z)
 
 echo ""
 echo "Index generated at $OUT"

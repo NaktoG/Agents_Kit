@@ -8,7 +8,8 @@ echo "" >> "$OUT"
 echo "| Agente | Rol | Auto-invoke destacado |" >> "$OUT"
 echo "|--------|-----|-----------------------|" >> "$OUT"
 
-for f in agents/*.md; do
+shopt -s nullglob
+while IFS= read -r f; do
   base=$(basename "$f")
   [ "$base" = "AGENTS_INDEX.md" ] && continue
 
@@ -25,7 +26,7 @@ for f in agents/*.md; do
   ' "$f" | head -n 2 | tr '\n' '; ')
 
   echo "| $name | ${role:-ver archivo} | ${autoinvoke:-ver archivo} |" >> "$OUT"
-done
+done < <(printf '%s\n' agents/*.md | LC_ALL=C sort)
 
 echo ""
 echo "Agents index generated at $OUT"

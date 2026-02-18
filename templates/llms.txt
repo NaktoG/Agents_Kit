@@ -1,0 +1,21 @@
+# llms.txt
+
+Short, link-first navigation map for LLMs and agents. Keep this file minimal.
+
+## Placement
+- Next.js: place at `/public/llms.txt` to serve as `/llms.txt`
+- Non-web repos: place at `/llms.txt` in the repo root
+
+## Primary links
+- README: `/README.md`
+- ENS: `/ens.md` (if present)
+
+## Optional links (if present)
+- Architecture: `/docs/ARCHITECTURE.md`
+- API: `/docs/API.md`
+- Runbook: `/docs/RUNBOOK.md`
+- Security baseline: `/policies/security-baseline.md`
+- No-hardcode policy: `/policies/no-hardcode.md`
+- Agents: `/agents/`
+- Skills index: `/skills/INDEX.md`
+- Playbooks: `/playbooks/`

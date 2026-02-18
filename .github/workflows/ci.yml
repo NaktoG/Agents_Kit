@@ -5,6 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   markdown-lint:
@@ -15,8 +16,11 @@ jobs:
       - name: Run markdownlint
         uses: DavidAnson/markdownlint-cli2-action@v16
         with:
+          config: .markdownlint.yaml
           globs: |
             **/*.md
+            !**/_import/**
+            !**/_inbox/**
             !**/.agentes.LOCAL_BACKUP/**
 
   link-check:
