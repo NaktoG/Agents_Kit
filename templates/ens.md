@@ -3,29 +3,29 @@
 This file is the canonical engineering contract for the repo. Keep it short, explicit, and up to date.
 
 ## Project context
-- Name: <project name>
-- Mission: <1-2 sentences>
-- Domain: <what the system does>
+- Name: `project name`
+- Mission: `1-2 sentences`
+- Domain: `what the system does`
 
 ## Stack
-- Languages: <e.g. TypeScript, Go>
-- Runtime: <e.g. Node 20, JVM 21>
-- Frameworks: <e.g. Fastify, Next.js>
-- Data: <e.g. Postgres, Redis>
-- Infra: <e.g. Docker, AWS>
+- Languages: `e.g. TypeScript, Go`
+- Runtime: `e.g. Node 20, JVM 21`
+- Frameworks: `e.g. Fastify, Next.js`
+- Data: `e.g. Postgres, Redis`
+- Infra: `e.g. Docker, AWS`
 
 ## Architecture
-- Style: <e.g. Clean Architecture, hexagonal>
+- Style: `e.g. Clean Architecture, hexagonal`
 - Principles: Clean Architecture, SRP, SOLID, clear module boundaries
-- Boundaries: <list core modules and responsibilities>
-- Data flow: <request -> validation -> domain -> persistence>
-- Integration points: <external services and boundaries>
+- Boundaries: `list core modules and responsibilities`
+- Data flow: `request -> validation -> domain -> persistence`
+- Integration points: `external services and boundaries`
 
 ## Constraints and limits
 - Backward compatibility: do not break existing consumers
-- Performance: <latency or throughput constraints>
-- Compliance: <PII, retention, audit requirements>
-- Environments: <dev/stage/prod rules>
+- Performance: `latency or throughput constraints`
+- Compliance: `PII, retention, audit requirements`
+- Environments: `dev/stage/prod rules`
 
 ## SOLID + SRP (mandatory)
 - One module = one responsibility; avoid mixed concerns
