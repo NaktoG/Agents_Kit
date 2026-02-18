@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Run gitleaks
         uses: gitleaks/gitleaks-action@v2
         env:
@@ -23,9 +25,26 @@ jobs:
   dependency-review:
     name: Dependency Review
     if: github.event_name == 'pull_request'
-    continue-on-error: true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check dependency graph
+        id: depgraph
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              await github.request('GET /repos/{owner}/{repo}/dependency-graph/sbom', {
+                owner: context.repo.owner,
+                repo: context.repo.repo
+              })
+              core.setOutput('enabled', 'true')
+            } catch (error) {
+              core.setOutput('enabled', 'false')
+            }
+      - name: Dependency graph not enabled
+        if: steps.depgraph.outputs.enabled != 'true'
+        run: echo "Dependency graph is disabled; skipping dependency review."
       - name: Dependency review
+        if: steps.depgraph.outputs.enabled == 'true'
         uses: actions/dependency-review-action@v4
