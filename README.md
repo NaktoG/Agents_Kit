@@ -33,6 +33,10 @@ Use the templates to standardize agent behavior and project context:
 3) Update links/paths in `llms.txt` to match your repo and keep them current.
 4) Link `ens.md` and `llms.txt` from your project README.
 
+## Dependency graph (GitHub)
+If CI fails the Dependency Review check, enable the dependency graph at
+`Settings → Security & analysis → Dependency graph` in the repo.
+
 ## Source of truth
 - `core/*`
 - `skills/**`

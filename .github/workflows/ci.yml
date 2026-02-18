@@ -18,6 +18,8 @@ jobs:
         with:
           globs: |
             **/*.md
+            !**/_import/**
+            !**/_inbox/**
             !**/.agentes.LOCAL_BACKUP/**
 
   link-check:
