@@ -1,0 +1,28 @@
+AgentOS Project Context
+
+Description:
+This file provides a concise, link-first map of the repo for LLMs and agents.
+
+Key Docs:
+- README: /README.md
+- Architecture: /docs/ARCHITECTURE.md
+- API: /docs/API.md
+- Runbook: /docs/RUNBOOK.md
+- Security: /policies/security-baseline.md
+- No-hardcode: /policies/no-hardcode.md
+
+Agents:
+- Orchestrator: /agents/orchestrator.md
+- Security Guardian: /agents/security_guardian.md
+- Backend: /agents/backend.md
+- Automation: /agents/automation.md
+- Docs: /agents/docs.md
+
+Skills:
+- Index: /skills/INDEX.md
+- Catalog: /skills/
+
+Playbooks:
+- Audit repo: /playbooks/audit_repo.md
+- Add endpoint: /playbooks/add_endpoint.md
+- n8n workflow change: /playbooks/n8n_workflow_change.md
