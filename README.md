@@ -29,8 +29,9 @@ Then add an `AI.md` in your project root pointing to `.agentes/`.
 Use the templates to standardize agent behavior and project context:
 
 1) Copy `templates/ens.md` to your project root as `ens.md` and fill placeholders.
-2) Copy `templates/llms.txt` to `public/llms.txt` (or repo root) and update links.
-3) Link `ens.md` and `llms.txt` from your project README.
+2) Copy `templates/llms.txt` to `/public/llms.txt` (Next.js) or `/llms.txt` (repo root).
+3) Update links/paths in `llms.txt` to match your repo and keep them current.
+4) Link `ens.md` and `llms.txt` from your project README.
 
 ## Source of truth
 - `core/*`

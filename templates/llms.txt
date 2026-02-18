@@ -1,28 +1,21 @@
-AgentOS Project Context
+# llms.txt
 
-Description:
-This file provides a concise, link-first map of the repo for LLMs and agents.
+Short, link-first navigation map for LLMs and agents. Keep this file minimal.
 
-Key Docs:
-- README: /README.md
-- Architecture: /docs/ARCHITECTURE.md
-- API: /docs/API.md
-- Runbook: /docs/RUNBOOK.md
-- Security: /policies/security-baseline.md
-- No-hardcode: /policies/no-hardcode.md
+## Placement
+- Next.js: place at `/public/llms.txt` to serve as `/llms.txt`
+- Non-web repos: place at `/llms.txt` in the repo root
 
-Agents:
-- Orchestrator: /agents/orchestrator.md
-- Security Guardian: /agents/security_guardian.md
-- Backend: /agents/backend.md
-- Automation: /agents/automation.md
-- Docs: /agents/docs.md
+## Primary links
+- README: `/README.md`
+- ENS: `/ens.md` (if present)
 
-Skills:
-- Index: /skills/INDEX.md
-- Catalog: /skills/
-
-Playbooks:
-- Audit repo: /playbooks/audit_repo.md
-- Add endpoint: /playbooks/add_endpoint.md
-- n8n workflow change: /playbooks/n8n_workflow_change.md
+## Optional links (if present)
+- Architecture: `/docs/ARCHITECTURE.md`
+- API: `/docs/API.md`
+- Runbook: `/docs/RUNBOOK.md`
+- Security baseline: `/policies/security-baseline.md`
+- No-hardcode policy: `/policies/no-hardcode.md`
+- Agents: `/agents/`
+- Skills index: `/skills/INDEX.md`
+- Playbooks: `/playbooks/`

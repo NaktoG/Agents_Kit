@@ -16,7 +16,7 @@ This file is the canonical engineering contract for the repo. Keep it short, exp
 
 ## Architecture
 - Style: <e.g. Clean Architecture, hexagonal>
-- Principles: SRP, SOLID, clear module boundaries
+- Principles: Clean Architecture, SRP, SOLID, clear module boundaries
 - Boundaries: <list core modules and responsibilities>
 - Data flow: <request -> validation -> domain -> persistence>
 - Integration points: <external services and boundaries>
@@ -27,18 +27,35 @@ This file is the canonical engineering contract for the repo. Keep it short, exp
 - Compliance: <PII, retention, audit requirements>
 - Environments: <dev/stage/prod rules>
 
-## Security and privacy (mandatory)
-- Validate inputs at boundaries and reject unknown fields
+## SOLID + SRP (mandatory)
+- One module = one responsibility; avoid mixed concerns
+- Dependencies point inward; domain stays framework-agnostic
+- Interfaces are small and explicit; no god services
+
+## AuthN/AuthZ (mandatory)
+- Authentication and authorization are explicit at boundaries
+- No implicit trust between services or modules
+- Sensitive endpoints require explicit auth checks
+
+## Config & secrets (mandatory)
+- Environment/config is the source of truth for production values
+- Never hardcode IDs, URLs, roles, tokens, or secrets
 - Never log secrets or PII; mask sensitive values
+
+## Security and privacy (mandatory)
+- Follow OWASP Top 10 baseline for web apps
+- Validate inputs at boundaries and reject unknown fields
 - Secret scanning enabled; do not commit secrets
 - Principle of least privilege for roles and access
-- Secrets only via environment/config, never inline
-- Authentication and authorization are explicit at boundaries
 
 ## No-hardcode policy (mandatory)
 - Production: no hardcoded IDs, URLs, roles, tokens, or secrets
 - Use config and environment variables for production values
 - Tests: centralize constants in factories/fixtures/testIds
+
+## Testing policy
+- Deterministic IDs are allowed only in tests when centralized in helpers/fixtures/testIds
+- Avoid leaking test-only IDs into production code paths
 
 ## PR guide
 - Keep PRs small and focused; one concern per PR
@@ -46,14 +63,8 @@ This file is the canonical engineering contract for the repo. Keep it short, exp
 - Update docs when behavior changes
 - Ensure tests and linting pass
 
-## Agent output format
-Every response must include:
-- Summary
-- Files touched
-- Risks
-- Mitigations
-- Next step
-
-## Operational rule
-- Agents execute actions and commands; users should not run manual commands
+## Operational rules for agents
+- Execute tasks end-to-end; do not ask users to run commands you can run
+- If context is missing, ask only the minimum required
 - Use tunnel/VPS when required for secure access
+- Every response must include: Summary, Files touched, Risks, Mitigations, Next step
